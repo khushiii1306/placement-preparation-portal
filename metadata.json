@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix PrepPortal Login",
+  "description": "A responsive, animated split-screen login page designed for seamless student placement preparation portal access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
