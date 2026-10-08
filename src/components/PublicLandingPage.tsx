@@ -108,13 +108,13 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                 Placement Cell Portal
               </span>
               <span className="block text-sm sm:text-base font-extrabold text-white tracking-tight">
-                Placement Preparation Portal
+                PlacementHub
               </span>
             </div>
           </div>
 
-          {/* Desktop Navigation Links: Home, About, Features, Companies, Events, Contact */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-bold text-slate-300">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-5 text-xs sm:text-sm font-bold text-slate-300">
             <button
               onClick={() => scrollToSection('hero')}
               className="hover:text-blue-400 transition-colors cursor-pointer"
@@ -126,6 +126,12 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
               className="hover:text-blue-400 transition-colors cursor-pointer"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection('arena')}
+              className="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Preparation
             </button>
             <button
               onClick={() => scrollToSection('features')}
@@ -140,16 +146,10 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
               Companies
             </button>
             <button
-              onClick={() => scrollToSection('events')}
+              onClick={() => scrollToSection('how-it-works')}
               className="hover:text-blue-400 transition-colors cursor-pointer"
             >
-              Events
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="hover:text-blue-400 transition-colors cursor-pointer"
-            >
-              Contact
+              How It Works
             </button>
           </nav>
 
@@ -222,6 +222,12 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                   About
                 </button>
                 <button
+                  onClick={() => scrollToSection('arena')}
+                  className="text-left py-1.5 hover:text-blue-400"
+                >
+                  Placement Arena
+                </button>
+                <button
                   onClick={() => scrollToSection('features')}
                   className="text-left py-1.5 hover:text-blue-400"
                 >
@@ -234,16 +240,10 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                   Companies
                 </button>
                 <button
-                  onClick={() => scrollToSection('events')}
+                  onClick={() => scrollToSection('how-it-works')}
                   className="text-left py-1.5 hover:text-blue-400"
                 >
-                  Events
-                </button>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-left py-1.5 hover:text-blue-400"
-                >
-                  Contact
+                  How It Works
                 </button>
               </nav>
 
@@ -296,7 +296,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
          ========================================================================= */}
       <section
         id="hero"
-        className="relative overflow-hidden bg-gradient-to-b from-[#0a0e27] via-[#0d1238] to-[#0f1742] text-white pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-indigo-900/60"
+        className="order-1 relative overflow-hidden bg-gradient-to-b from-[#0a0e27] via-[#0d1238] to-[#0f1742] text-white pt-8 pb-10 sm:pt-10 sm:pb-12 lg:pt-12 lg:pb-14 border-b border-indigo-900/60"
       >
         {/* Soft Blue Ambient Glow Spheres */}
         <div className="pointer-events-none absolute -left-40 top-10 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-3xl" />
@@ -362,9 +362,9 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                   { label: 'TCS', action: () => handleOpenCompany('tcs') },
                   { label: 'Infosys', action: () => handleOpenCompany('infosys') },
                   { label: 'Accenture', action: () => handleOpenCompany('accenture') },
-                  { label: 'Aptitude', action: () => scrollToSection('practice') },
-                  { label: 'Coding', action: () => scrollToSection('practice') },
-                  { label: 'Mock Tests', action: () => scrollToSection('mock-tests') },
+                  { label: 'Aptitude', action: () => scrollToSection('arena') },
+                  { label: 'Coding', action: () => scrollToSection('arena') },
+                  { label: 'Mock Tests', action: () => scrollToSection('arena') },
                   { label: 'Interview Preparation', action: () => scrollToSection('features') },
                 ].map((chip) => (
                   <button
@@ -410,23 +410,23 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           3. ABOUT SECTION (DARK THEME)
           Institutional Career Development & Centralized Preparation
          ========================================================================= */}
-      <section id="about" className="py-16 sm:py-24 bg-[#0c1033] border-b border-indigo-900/60 text-white">
+      <section id="about" className="order-2 py-12 sm:py-16 bg-[#0c1033] border-b border-indigo-900/60 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
               Institutional Career Development
             </span>
             <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
-              About Placement Preparation Portal
+              About PlacementHub
             </h2>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              The Placement Preparation Portal is the campus Training & Placement Cell&apos;s centralized digital ecosystem.
+              PlacementHub is the campus Training & Placement Cell&apos;s centralized digital ecosystem.
               Designed specifically for engineering and college graduates, it bridges the gap between classroom academics and
               rigorous corporate hiring requirements across Fortune 500 and top technology recruiters.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-indigo-900/60 bg-[#0e1738] p-6 space-y-3 hover:border-blue-500/60 hover:shadow-xl hover:shadow-blue-500/10 transition-all">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/15 border border-blue-500/30 text-blue-400 shadow-md">
                 <Target className="h-6 w-6" />
@@ -463,7 +463,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
       {/* =========================================================================
           4. FEATURES FOR STUDENTS AND COLLEGES (DARK THEME)
          ========================================================================= */}
-      <section id="features" className="py-16 sm:py-24 bg-[#0e133c] border-b border-indigo-900/60 text-white">
+      <section id="features" className="order-4 py-12 sm:py-16 bg-[#0e133c] border-b border-indigo-900/60 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
@@ -682,7 +682,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
          ========================================================================= */}
       <section
         id="arena"
-        className="py-16 sm:py-24 bg-[#0a0e27] text-white relative overflow-hidden border-b border-indigo-900/60"
+        className="order-4 py-16 sm:py-24 bg-[#0a0e27] text-white relative overflow-hidden border-b border-indigo-900/60"
       >
         <div className="pointer-events-none absolute left-1/4 top-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
         <div className="pointer-events-none absolute right-10 bottom-10 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl" />
@@ -847,119 +847,11 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
       </section>
 
       {/* =========================================================================
-          6. "PRACTICE BY CATEGORY" SECTION (DARK THEME)
-          Cards: Quantitative Aptitude, Logical Reasoning, Verbal Ability, Data Interpretation, Coding Practice
-          Each card: Icon, description, progress, questions count, explore button
-         ========================================================================= */}
-      <section id="practice" className="py-16 sm:py-24 bg-[#0c1033] border-b border-indigo-900/60 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
-              Curated Problem Sets
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
-              Practice by Category
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300">
-              Master core placement subjects with topic-wise drills, formula guides, and structured practice questions.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-            {[
-              {
-                title: 'Quantitative Aptitude',
-                icon: Calculator,
-                questions: '450+ Questions',
-                progress: 72,
-                desc: 'Percentages, ratios, time & work, speed math, profit & loss, algebra drills.',
-              },
-              {
-                title: 'Logical Reasoning',
-                icon: Compass,
-                questions: '380+ Questions',
-                progress: 68,
-                desc: 'Syllogisms, blood relations, seating arrangements, coding-decoding, series.',
-              },
-              {
-                title: 'Verbal Ability',
-                icon: BookOpen,
-                questions: '320+ Questions',
-                progress: 75,
-                desc: 'Reading comprehension, sentence correction, vocabulary, para-jumbles.',
-              },
-              {
-                title: 'Data Interpretation',
-                icon: TrendingUp,
-                questions: '210+ Questions',
-                progress: 60,
-                desc: 'Bar graphs, pie charts, tabular analysis, line plots, caselets.',
-              },
-              {
-                title: 'Coding Practice',
-                icon: Code2,
-                questions: '180+ Challenges',
-                progress: 45,
-                desc: 'DSA in C++, Java & Python: Arrays, Strings, Trees, DP & Graphs.',
-              },
-            ].map((cat) => {
-              const Icon = cat.icon;
-              return (
-                <div
-                  key={cat.title}
-                  className="rounded-2xl border border-indigo-900/60 bg-[#0e1738] p-5 shadow-lg flex flex-col justify-between space-y-4 hover:border-blue-500/80 hover:shadow-xl hover:shadow-blue-500/15 hover:-translate-y-1 transition-all group"
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600/15 border border-blue-500/30 text-blue-400 group-hover:scale-105 transition-transform">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <span className="rounded-full bg-blue-950/80 border border-blue-500/30 px-2 py-0.5 text-[10px] font-bold text-blue-300">
-                        {cat.questions}
-                      </span>
-                    </div>
-
-                    <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">
-                      {cat.title}
-                    </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">
-                      {cat.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-indigo-900/60 space-y-2.5">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-slate-400 font-medium">Readiness</span>
-                      <span className="text-blue-300 font-bold">{cat.progress}%</span>
-                    </div>
-                    <div className="h-1.5 w-full rounded-full bg-indigo-950/80 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-500"
-                        style={{ width: `${cat.progress}%` }}
-                      />
-                    </div>
-                    <button
-                      type="button"
-                      onClick={onNavigateRegister}
-                      className="w-full mt-2 rounded-xl border border-indigo-800/80 bg-blue-950/40 py-2 text-xs font-bold text-blue-300 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all cursor-pointer text-center flex items-center justify-center gap-1.5"
-                    >
-                      <span>Explore Topic</span>
-                      <ArrowRight className="h-3 w-3" />
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
           7. "PREPARE FOR YOUR DREAM COMPANY" (DARK THEME)
           Animated horizontal logo carousel (two opposing rows)
           TCS, Infosys, Accenture, Wipro, Deloitte, Cognizant, HCLTech, Capgemini
          ========================================================================= */}
-      <section id="companies" className="py-16 sm:py-24 bg-[#0c1136] border-b border-indigo-900/60 overflow-hidden text-white">
+      <section id="companies" className="order-5 py-16 sm:py-24 bg-[#0c1136] border-b border-indigo-900/60 overflow-hidden text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
@@ -985,7 +877,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           Cards: Aptitude Assessment, Coding Assessment, TCS Placement Mock, General Placement Mock
           Questions, Duration, Difficulty, Start Test button
          ========================================================================= */}
-      <section id="mock-tests" className="py-16 sm:py-24 bg-[#0e1440] border-b border-indigo-900/60 text-white">
+      <section id="mock-tests" className="hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
             <div className="space-y-3">
@@ -1104,7 +996,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           Aptitude: 72%, Reasoning: 68%, Verbal: 75%, Coding: 45%
           Questions Attempted: 240, Mock Tests: 5, Average Score: 78%
          ========================================================================= */}
-      <section id="progress" className="py-16 sm:py-24 bg-[#0c1033] border-b border-indigo-900/60 text-white">
+      <section id="progress" className="hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
@@ -1230,7 +1122,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           Coding Challenge, Quiz, Hiring Challenge, Placement Challenge
           Event date, registration deadline, event type, register button
          ========================================================================= */}
-      <section id="events" className="py-16 sm:py-24 bg-[#0e1440] border-b border-indigo-900/60 text-white">
+      <section id="events" className="hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
             <div className="space-y-3">
@@ -1401,7 +1293,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           11. "HOW IT WORKS" (DARK THEME)
           Create Account -> Practice -> Take Mock Tests -> Track Progress -> Get Placement Ready
          ========================================================================= */}
-      <section id="how-it-works" className="py-16 sm:py-24 bg-[#0c1033] border-b border-indigo-900/60 text-white">
+      <section id="how-it-works" className="order-6 py-16 sm:py-24 bg-[#0c1033] border-b border-indigo-900/60 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full inline-block">
@@ -1476,7 +1368,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
       {/* =========================================================================
           12. CONTACT & T&P CELL INQUIRIES (DARK THEME)
          ========================================================================= */}
-      <section id="contact" className="py-16 sm:py-24 bg-[#0e133c] border-b border-indigo-900/60 text-white">
+      <section id="contact" className="hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-6">
@@ -1609,7 +1501,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           Supporting text: "Build your skills, practice consistently and prepare with confidence."
           Button: "Create Your Free Account" (Royal blue gradient with subtle glow)
          ========================================================================= */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#0a0e27] via-[#0f1644] to-[#0a0e27] text-white py-16 sm:py-20 text-center border-b border-indigo-900/60">
+      <section className="order-7 relative overflow-hidden bg-gradient-to-r from-[#0a0e27] via-[#0f1644] to-[#0a0e27] text-white py-12 sm:py-16 text-center border-b border-indigo-900/60">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.15)_0,transparent_70%)]" />
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
@@ -1651,7 +1543,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           Clean & professional: Logo, About, Features, Companies, Events, Contact, Login, Register
           Strictly NO Admin link exposed to public users.
          ========================================================================= */}
-      <footer className="bg-[#060919] text-slate-400 border-t border-indigo-950 text-xs py-12">
+      <footer className="order-8 bg-[#060919] text-slate-400 border-t border-indigo-950 text-xs py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-indigo-950">
             {/* Col 1: Brand Info */}
@@ -1660,7 +1552,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-black">
                   <GraduationCap className="h-4 w-4" />
                 </div>
-                <span className="font-extrabold text-sm tracking-tight">Placement Preparation Portal</span>
+                <span className="font-extrabold text-sm tracking-tight">PlacementHub</span>
               </div>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Centralized placement training, aptitude practice, and recruitment readiness platform engineered for college students and campus career development cells.
@@ -1697,13 +1589,8 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('events')} className="hover:text-blue-400 transition-colors cursor-pointer">
-                    Events & Challenges
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection('contact')} className="hover:text-blue-400 transition-colors cursor-pointer">
-                    Contact Us
+                  <button onClick={() => scrollToSection('how-it-works')} className="hover:text-blue-400 transition-colors cursor-pointer">
+                    How It Works
                   </button>
                 </li>
               </ul>
@@ -1714,28 +1601,23 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
               <h4 className="text-white font-bold text-xs uppercase tracking-wider">Preparation Modules</h4>
               <ul className="space-y-1.5">
                 <li>
-                  <button onClick={() => scrollToSection('practice')} className="hover:text-blue-400 transition-colors cursor-pointer">
+                  <button onClick={() => scrollToSection('arena')} className="hover:text-blue-400 transition-colors cursor-pointer">
                     Quantitative Aptitude
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('practice')} className="hover:text-blue-400 transition-colors cursor-pointer">
+                  <button onClick={() => scrollToSection('arena')} className="hover:text-blue-400 transition-colors cursor-pointer">
                     Coding Practice Lab
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('mock-tests')} className="hover:text-blue-400 transition-colors cursor-pointer">
+                  <button onClick={() => scrollToSection('arena')} className="hover:text-blue-400 transition-colors cursor-pointer">
                     TCS & Infosys Mock Tests
                   </button>
                 </li>
                 <li>
                   <button onClick={() => scrollToSection('companies')} className="hover:text-blue-400 transition-colors cursor-pointer">
                     Company Readiness Hub
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection('events')} className="hover:text-blue-400 transition-colors cursor-pointer">
-                    Events & Coding Contests
                   </button>
                 </li>
               </ul>
@@ -1767,7 +1649,7 @@ export const PublicLandingPage: React.FC<PublicLandingPageProps> = ({
           </div>
 
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-            <p>© 2026 Placement Preparation Portal. All rights reserved. Campus Training & Placement Cell.</p>
+            <p>© 2026 PlacementHub. All rights reserved. Campus Training & Placement Cell.</p>
             <div className="flex items-center gap-4">
               <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
               <span>•</span>

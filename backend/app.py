@@ -78,7 +78,7 @@ def db_test():
         db.session.execute(db.text("SELECT 1"))
         return "PostgreSQL connected successfully!"
     except Exception as e:
-        return f"Database connection failed: {e}", 500
+        return f"Database connection failed", 500
 @app.route("/")
 def home():
     return "Placement Preparation Portal Backend is running!"
@@ -86,4 +86,5 @@ def home():
 with app.app_context():
     db.create_all()
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
+            
